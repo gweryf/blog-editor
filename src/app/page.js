@@ -55,15 +55,15 @@ export default function Home() {
         <h2 className=' font-bold text-3xl text-center p-5'>Topics</h2>
         <div className=' flex flex-col divide-y divide-slate-700'>
           {
-            items.map((item)=>{
+            items.map((item, index)=>{
               return(
-                <div className=' flex flex-col gap-4 md:flex-row justify-between p-5 items-center'>
+                <div key={index} className=' flex flex-col gap-4 md:flex-row justify-between p-5 items-center'>
                   <div className=' flex flex-col gap-2'> 
                     <h3 className=' text-center font-bold text-xl'>{item.title}</h3>
                     <div className=' flex gap-5 justify-center items-center md:items-start md:justify-normal'>
-                    {item.keywords.map((keyword)=>{
+                    {item.keywords.map((keyword,index)=>{
                       return(
-                        <div className=' px-2 text-sky-800 text-lg bg-sky-200 border border-sky-500 rounded-lg'>
+                        <div key={index} className=' px-2 text-sky-800 text-lg bg-sky-200 border border-sky-500 rounded-lg'>
                           {keyword}
                         </div>
                       )
