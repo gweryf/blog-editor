@@ -32,11 +32,11 @@ const MyForm = (props)=>{
                     <div className=" flex flex-col justify-center items-center p-4">
                         <div className=" p-2 flex flex-col gap-2">
                             <label>Topic Name:</label>
-                            <input name="title" type="text" onChange={handleTitle} className=" my-1 w-full border border-gray-600 px-3 py-1 rounded-lg shadow-sm focus:outline-none"/>
+                            <input name="title" type="text" onChange={handleTitle} className=" my-1 w-full border text-black border-gray-600 px-3 py-1 rounded-lg shadow-sm focus:outline-none"/>
                         </div>
                         <div className=" p-2 flex flex-col gap-2">
                             <label>Keyword:</label>
-                            <input name="keywords" type="text" onChange={handleKey} className=" my-1 w-full border border-gray-600 px-3 py-1 rounded-lg shadow-sm focus:outline-none" />
+                            <input name="keywords" type="text" onChange={handleKey} className=" my-1 w-full border text-black border-gray-600 px-3 py-1 rounded-lg shadow-sm focus:outline-none" />
                         </div>
                     </div>
                     <div className=" flex justify-center items-center" >
