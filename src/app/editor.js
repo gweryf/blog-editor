@@ -1,7 +1,6 @@
 import { useQuill } from 'react-quilljs';
 import 'quill/dist/quill.snow.css';
 import { useEffect, useState } from 'react';
-import React from 'react';
 import Tasks from './data/tasks';
 
 export default function Editor(props){
