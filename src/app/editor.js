@@ -19,7 +19,7 @@ export default function Editor(props){
         closeEditor()
     }
     
-    React.useEffect(() => {
+    useEffect(() => {
         console.log('ok');
         if (quill) {
           quill.on('text-change', () => {
