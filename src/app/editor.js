@@ -13,7 +13,6 @@ export default function Editor(props){
         }
     })
     const { quill, quillRef } = useQuill({placeholder});
-    const {value, setValue} = useState('');
 
     const handleClick = ()=>{
         closeEditor()
@@ -25,17 +24,15 @@ export default function Editor(props){
           quill.on('text-change', () => {
             
             console.log(quillRef.current.firstChild.innerHTML);
-            setValue(quillRef.current.firstChild.innerHTML)
           });
         }
       }, [quill]);
-      console.log(value, 'this is quill');
 
     return(
         <div className=" fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex justify-center items-center">
             <div className=" bg-white px-5 rounded h-{300}">
                 <h2 className=' text-black text-2xl text-center font-extrabold mt-2'>Blog</h2>
-                <div className=' p-5 w-full mb-8' style={{ width: 500, height: 300 }}>
+                <div className=' p-5 w-full mb-8 text-black' style={{ width: 500, height: 300 }}>
                     <div ref={quillRef} />
                 </div>
                 <div className=' flex justify-center items-center'>
