@@ -6,12 +6,6 @@ import Tasks from './data/tasks';
 
 export default function Editor(props){
     const {items, setItem, name, closeEditor} = props
-    let placeholder = ''
-    items.map((item)=>{
-        if(item.title === name){
-            placeholder = item.content
-        }
-    })
     const { quill, quillRef } = useQuill();
 
     const handleClick = ()=>{
