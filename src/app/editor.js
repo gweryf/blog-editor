@@ -12,7 +12,7 @@ export default function Editor(props){
             placeholder = item.content
         }
     })
-    const { quill, quillRef } = useQuill({placeholder});
+    const { quill, quillRef } = useQuill();
 
     const handleClick = ()=>{
         closeEditor()
